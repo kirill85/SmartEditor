@@ -2,6 +2,8 @@
 #define MAINWINDOW_HPP
 
 #include <QtGui/QMainWindow>
+#include "FileHelper.hpp"
+#include <QFileDialog>
 
 namespace Ui {
 class MainWindow;
@@ -17,6 +19,11 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    FileHelper *fileHelper;
+    QFileDialog *openSaveDialog;
+private slots:
+    void actionFileOpenClicked();
+    void actionFileSaveClicked();
 };
 
 #endif // MAINWINDOW_HPP
