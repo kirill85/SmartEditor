@@ -15,7 +15,7 @@ public:
     explicit FileHelper(QObject *parent = 0);
     virtual ~FileHelper();
     void setContent(QString content);
-    const QStringList *filter;
+    QStringList filter;
 signals:
     void fileContent(QString content);
 

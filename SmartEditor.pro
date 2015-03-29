@@ -10,7 +10,8 @@ QMAKE_CXXFLAGS += -std=c++0x
 # Input
 HEADERS += src/MainWindow.hpp \
     src/FileHelper.hpp \
-    src/IOException.hpp
+    src/IOException.hpp \
+    src/keywords.h
 FORMS += MainWindow.ui
 SOURCES += src/main.cpp src/MainWindow.cpp \
     src/FileHelper.cpp \

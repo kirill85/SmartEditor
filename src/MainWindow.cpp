@@ -8,7 +8,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     fileHelper = new FileHelper(this);
     openSaveDialog = new QFileDialog(this);
-    openSaveDialog->setNameFilters(*fileHelper->filter);
+    openSaveDialog->setNameFilters(fileHelper->filter);
     connect(ui->actionOpen, SIGNAL(triggered()), this, SLOT(actionFileOpenClicked()));
     connect(ui->actionClose, SIGNAL(triggered()), SLOT(close()));
 }

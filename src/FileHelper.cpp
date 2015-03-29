@@ -5,14 +5,13 @@ FileHelper::FileHelper(QObject *parent) :
     QObject(parent)
 {
     content = "";
-    filter = new QStringList(std::initializer_list<QString>({QString("C source files (*.c)"),
-                                                            QString("Objective-C source files (*.m)"),
-                                                            QString("Header files (*.h)")}));
+    filter = std::initializer_list<QString>{"C source files (*.c)",
+                                                            "Objective-C source files (*.m)",
+                                                            "Header files (*.h)"};
 }
 
 FileHelper::~FileHelper()
 {
-    delete filter;
 }
 
 void FileHelper::setContent(QString content)
